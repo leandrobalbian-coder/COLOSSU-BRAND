@@ -8,6 +8,7 @@ export default function SpacingPage() {
         eyebrow="Foundations"
         title="Spacing"
         description="Escala basada en 4px. Todos los gaps, paddings y márgenes en la UI deben encajar en esta escala — incluso los layouts densos del dashboard."
+        download={{ file: "spacing-tokens.md", label: "spacing-tokens.md" }}
       />
 
       <section className="mb-12">

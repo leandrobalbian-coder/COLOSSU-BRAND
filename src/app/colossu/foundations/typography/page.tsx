@@ -37,6 +37,7 @@ export default function TypographyPage() {
         title="Typography"
         description="Una sola familia tipográfica: Geist. La jerarquía se establece por contraste de tamaño, peso y color — no por mezcla de fuentes. Geist Mono se reserva para datos técnicos, métricas y eyebrow labels."
         figmaNodeId="35:3105"
+        download={{ file: "typography-tokens.md", label: "typography-tokens.md" }}
       />
 
       <section className="mb-12">

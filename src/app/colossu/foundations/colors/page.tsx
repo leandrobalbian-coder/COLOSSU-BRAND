@@ -34,6 +34,7 @@ export default function ColorsPage() {
         title="Colors"
         description="Dos modos, una identidad: Platform (dark) en pantalla, Reports (light) en papel. Cada color es un token con tres capas: primitivo → semántico → componente."
         figmaNodeId="35:3239"
+        download={{ file: "color-tokens.md", label: "color-tokens.md" }}
       />
 
       <section className="mb-12">

@@ -18,6 +18,7 @@ export default function ShadowsPage() {
         eyebrow="Foundations"
         title="Shadows"
         description="Cinco tokens de elevación. La sombra accent es especial — sólo se usa en el CTA primario para que el verde se proyecte como halo."
+        download={{ file: "spacing-tokens.md", label: "spacing-tokens.md" }}
       />
 
       <section>

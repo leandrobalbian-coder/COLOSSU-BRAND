@@ -1,0 +1,360 @@
+# Ladrillo Design System — AI Context
+
+> This file is a flat, self-contained snapshot of the Colossu (Spot2) design
+> system. Paste it as system prompt or attach it when asking an LLM (Claude,
+> GPT, Cursor, v0) to generate interfaces consistent with Colossu.
+>
+> Source of truth: https://www.figma.com/design/5xtvRE2XDDmTcuMZ7gz6iE/BRANDING-COLOSSU
+
+## About Colossu
+
+Colossu is a Spot2 product. The brand is built around two ideas — **Security**
+(Deep Navy) and **Growth** (Green) — and resolves into two interfaces:
+
+- **Platform UI** — the live app. Dark mode. Deep Navy base, Charcoal surfaces,
+  Growth Green accent. Built for prolonged use.
+- **Reports** — printed and PDF reports. Light mode. White base, Slate
+  surfaces, Deep Navy text, Growth Green accent.
+
+Both modes share the **same semantic token names**, so any component built
+against the tokens flips automatically by toggling `class="dark"` on `<html>`.
+
+## Stack
+
+- Next.js 16 (App Router) · React 19 · TypeScript
+- Tailwind CSS 4 (CSS-first config)
+- shadcn/ui — `base-nova` preset
+- Tokens delivered as CSS variables; the source of truth lives in
+  `src/tokens/*.ts` and is mirrored into `src/styles/tokens.css`.
+
+## Hard rules
+
+1. **Never modify shadcn components.** Only style via CSS variables.
+2. **Strict three-layer hierarchy.** Primitive → Semantic → Component.
+   A component never references a primitive directly.
+3. **Tokens-first.** Add the token, then write the component that consumes it.
+4. **No hex literals in product code.** Use Tailwind utilities
+   (`bg-primary`, `text-foreground`) or `var(--name)` — never `#16A34A`.
+5. **Growth Green is scarce.** One per screen. Reserve it for the primary CTA
+   or the canonical metric of the view.
+
+## Brand palette
+
+- **Deep Navy** `#0B1F33` — institutional base (security, authority)
+- **Growth Green** `#16A34A` — brand accent (action, success, growth)
+- **Charcoal** `#1F2933` — UI surface (sidebars, cards, secondary fills)
+
+## Color tokens
+
+Source: [Figma — BRANDING-COLOSSU](https://www.figma.com/design/5xtvRE2XDDmTcuMZ7gz6iE/BRANDING-COLOSSU).
+
+Three layers. A component never references a primitive directly — it consumes a semantic token, which is themed at runtime via `:root` and `.dark`.
+
+## Primitives
+
+| Token | Value |
+| --- | --- |
+| `--lad-navy-800` | `#1F2933` |
+| `--lad-navy-900` | `#0B1F33` |
+| `--lad-green-50` | `#F0FDF4` |
+| `--lad-green-400` | `#4ADE80` |
+| `--lad-green-500` | `#22C55E` |
+| `--lad-green-600` | `#16A34A` |
+| `--lad-green-700` | `#15803D` |
+| `--lad-green-800` | `#166534` |
+| `--lad-slate-50` | `#F8FAFC` |
+| `--lad-slate-100` | `#F1F5F9` |
+| `--lad-slate-200` | `#E2E8F0` |
+| `--lad-slate-300` | `#CBD5E1` |
+| `--lad-slate-400` | `#94A3B8` |
+| `--lad-slate-500` | `#64748B` |
+| `--lad-slate-600` | `#475569` |
+| `--lad-slate-700` | `#334155` |
+| `--lad-slate-800` | `#1E293B` |
+| `--lad-slate-900` | `#0F172A` |
+| `--lad-slate-950` | `#020617` |
+| `--lad-red-500` | `#EF4444` |
+| `--lad-red-600` | `#DC2626` |
+| `--lad-red-700` | `#B91C1C` |
+| `--lad-red-900` | `#7F1D1D` |
+| `--lad-amber-500` | `#F59E0B` |
+| `--lad-amber-600` | `#D97706` |
+| `--lad-white` | `#FFFFFF` |
+| `--lad-black` | `#000000` |
+
+## Semantic — Light (Reports)
+
+| Token | Value |
+| --- | --- |
+| `--background` | `#FFFFFF` |
+| `--surface` | `#F8FAFC` |
+| `--card` | `#FFFFFF` |
+| `--popover` | `#FFFFFF` |
+| `--foreground` | `#0B1F33` |
+| `--foreground-muted` | `#64748B` |
+| `--foreground-subtle` | `#94A3B8` |
+| `--primary` | `#16A34A` |
+| `--primary-foreground` | `#FFFFFF` |
+| `--primary-hover` | `#15803D` |
+| `--secondary` | `#F1F5F9` |
+| `--secondary-foreground` | `#0B1F33` |
+| `--muted` | `#F1F5F9` |
+| `--muted-foreground` | `#64748B` |
+| `--accent` | `#F1F5F9` |
+| `--accent-foreground` | `#0B1F33` |
+| `--border` | `#E2E8F0` |
+| `--input` | `#E2E8F0` |
+| `--ring` | `#16A34A` |
+| `--destructive` | `#DC2626` |
+| `--destructive-foreground` | `#FFFFFF` |
+| `--success` | `#16A34A` |
+| `--success-foreground` | `#FFFFFF` |
+| `--warning` | `#F59E0B` |
+| `--warning-foreground` | `#0B1F33` |
+| `--sidebar` | `#FFFFFF` |
+| `--sidebar-foreground` | `#0B1F33` |
+| `--sidebar-primary` | `#16A34A` |
+| `--sidebar-primary-foreground` | `#FFFFFF` |
+| `--sidebar-accent` | `#F1F5F9` |
+| `--sidebar-accent-foreground` | `#0B1F33` |
+| `--sidebar-border` | `#E2E8F0` |
+| `--sidebar-ring` | `#16A34A` |
+| `--chart-1` | `#16A34A` |
+| `--chart-2` | `#94A3B8` |
+| `--chart-3` | `#475569` |
+| `--chart-4` | `#F59E0B` |
+| `--chart-5` | `#DC2626` |
+
+## Semantic — Dark (Platform UI)
+
+| Token | Value |
+| --- | --- |
+| `--background` | `#0B1F33` |
+| `--surface` | `#1F2933` |
+| `--card` | `#1F2933` |
+| `--popover` | `#1F2933` |
+| `--foreground` | `#FFFFFF` |
+| `--foreground-muted` | `#94A3B8` |
+| `--foreground-subtle` | `#475569` |
+| `--primary` | `#16A34A` |
+| `--primary-foreground` | `#FFFFFF` |
+| `--primary-hover` | `#22C55E` |
+| `--secondary` | `#1F2933` |
+| `--secondary-foreground` | `#FFFFFF` |
+| `--muted` | `#1F2933` |
+| `--muted-foreground` | `#94A3B8` |
+| `--accent` | `#1F2933` |
+| `--accent-foreground` | `#FFFFFF` |
+| `--border` | `#1E293B` |
+| `--input` | `#1E293B` |
+| `--ring` | `#16A34A` |
+| `--destructive` | `#B91C1C` |
+| `--destructive-foreground` | `#FFFFFF` |
+| `--success` | `#22C55E` |
+| `--success-foreground` | `#0B1F33` |
+| `--warning` | `#F59E0B` |
+| `--warning-foreground` | `#0B1F33` |
+| `--sidebar` | `#1F2933` |
+| `--sidebar-foreground` | `#FFFFFF` |
+| `--sidebar-primary` | `#16A34A` |
+| `--sidebar-primary-foreground` | `#FFFFFF` |
+| `--sidebar-accent` | `#1E293B` |
+| `--sidebar-accent-foreground` | `#FFFFFF` |
+| `--sidebar-border` | `#1E293B` |
+| `--sidebar-ring` | `#16A34A` |
+| `--chart-1` | `#22C55E` |
+| `--chart-2` | `#CBD5E1` |
+| `--chart-3` | `#64748B` |
+| `--chart-4` | `#F59E0B` |
+| `--chart-5` | `#EF4444` |
+
+
+## Typography
+
+Colossu uses **Geist** (sans) and **Geist Mono**. The hierarchy is established
+by contrast (size, weight, color) — never by mixing typeface families.
+
+Source: [Figma — BRANDING-COLOSSU](https://www.figma.com/design/5xtvRE2XDDmTcuMZ7gz6iE/BRANDING-COLOSSU).
+
+Colossu uses **Geist** (sans) and **Geist Mono** as a single typographic system. Hierarchy comes from contrast of size, weight and color — never from mixing families.
+
+## Families
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `fontFamily.sans` | `var(--font-sans)` | Titles, UI, body text |
+| `fontFamily.mono` | `var(--font-mono)` | Numbers, code, eyebrows, token names |
+
+## Scale
+
+| Token | Value |
+| --- | --- |
+| `fontSize.hero` | `3.875rem` |
+| `fontSize.display` | `3.5rem` |
+| `fontSize.h1` | `2.5rem` |
+| `fontSize.h2` | `2rem` |
+| `fontSize.h3` | `1.5rem` |
+| `fontSize.h4` | `1.25rem` |
+| `fontSize.bodyLg` | `1.125rem` |
+| `fontSize.body` | `1rem` |
+| `fontSize.bodySm` | `0.875rem` |
+| `fontSize.caption` | `0.75rem` |
+
+## Weights
+
+| Token | Value |
+| --- | --- |
+| `fontWeight.regular` | `400` |
+| `fontWeight.medium` | `500` |
+| `fontWeight.semibold` | `600` |
+| `fontWeight.bold` | `700` |
+
+## Line height
+
+| Token | Value |
+| --- | --- |
+| `lineHeight.tight` | `1.1` |
+| `lineHeight.snug` | `1.2` |
+| `lineHeight.normal` | `1.4` |
+| `lineHeight.relaxed` | `1.6` |
+
+## Letter spacing
+
+| Token | Value |
+| --- | --- |
+| `letterSpacing.tighter` | `-0.02em` |
+| `letterSpacing.tight` | `-0.01em` |
+| `letterSpacing.normal` | `0` |
+| `letterSpacing.wide` | `0.05em` |
+| `letterSpacing.wider` | `0.2em` |
+
+
+## Spacing, radius & shadows
+
+Source: [Figma — BRANDING-COLOSSU](https://www.figma.com/design/5xtvRE2XDDmTcuMZ7gz6iE/BRANDING-COLOSSU).
+
+## Spacing (4px base)
+
+| Token | Value |
+| --- | --- |
+| `space.0` | `0` |
+| `space.1` | `0.25rem` |
+| `space.2` | `0.5rem` |
+| `space.3` | `0.75rem` |
+| `space.4` | `1rem` |
+| `space.5` | `1.25rem` |
+| `space.6` | `1.5rem` |
+| `space.8` | `2rem` |
+| `space.10` | `2.5rem` |
+| `space.12` | `3rem` |
+| `space.16` | `4rem` |
+
+## Radius
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `radius.none` | `0` | Tables, full-bleed dividers |
+| `radius.sm` | `0.25rem` | Inline badges, chips, status pills |
+| `radius.md` | `0.5rem` | Secondary surfaces, nested cards |
+| `radius.lg` | `0.625rem` | Default card / container radius |
+| `radius.xl` | `0.875rem` | Hero modules, marketing surfaces |
+| `radius.full` | `9999px` | Avatars, dots, fully rounded pills |
+
+## Shadows
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `shadow.sm` | `0 2px 6px 0 rgba(0,0,0,0.20)` | Avatars, chips, floating dots |
+| `shadow.md` | `0 4px 16px 0 rgba(0,0,0,0.20)` | Card default — on-canvas surfaces |
+| `shadow.lg` | `0 8px 24px 0 rgba(0,0,0,0.25)` | Modals, popovers, dropdown menus |
+| `shadow.accent` | `0 8px 24px 0 rgba(22,163,74,0.25)` | Primary CTAs only — Growth Green halo |
+| `shadow.insetTop` | `inset 0 2px 8px 0 rgba(0,0,0,0.30)` | Pressed/recessed surfaces, focused inputs |
+
+
+## Component usage
+
+Ladrillo ships no UI components of its own — it ships the **CSS variables** that
+[shadcn/ui](https://ui.shadcn.com) already consumes (`--background`,
+`--primary`, `--card`, etc.). Importing the Ladrillo `tokens.css` is enough
+to give every shadcn component Colossu's personality.
+
+## Quick start
+
+```bash
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm sync-tokens  # regenerate tokens from src/tokens/*
+```
+
+## Wiring tokens into an existing app
+
+1. Copy `src/styles/tokens.css` (or fetch the latest from
+   `https://ladrillo.vercel.app/downloads/tokens.css` once Sprint 6 ships).
+2. Import it from your root CSS file:
+
+```css
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./tokens.css";   /* ← adds Ladrillo */
+```
+
+3. Make sure your `@theme inline` block maps Tailwind's color utilities to
+   the shadcn names (`--color-primary: var(--primary)`, etc.). This is the
+   default setup of `base-nova` and most current shadcn templates.
+4. Set `class="dark"` on `<html>` for Platform mode, omit for Reports mode.
+
+## Conventions
+
+- **Strict three-layer hierarchy.** Primitive → Semantic → Component.
+  A component never references `--lad-green-600` directly; it consumes
+  `--primary` instead.
+- **Tokens-first.** Add the token, then write the component that consumes it.
+- **No hex literals.** Use Tailwind utilities (`bg-primary`,
+  `text-foreground`) or `var(--name)` — never `#16A34A` inline.
+- **Use Growth Green sparingly.** It is the brand accent. One per screen,
+  reserved for the primary action / canonical metric.
+- **Don't modify components in `src/components/ui/`.** They come from
+  shadcn — re-running `npx shadcn@latest add` must not destroy local
+  customizations.
+
+## When you need a new token
+
+1. Decide which layer it belongs to. If it's brand-level, it's a primitive.
+   If it's a new role (e.g. `info`), it's a semantic. If it's a one-off
+   component contract, it's a component-level token.
+2. Add it to the matching file in `src/tokens/`.
+3. Run `pnpm sync-tokens` to regenerate `tokens.css` and all docs.
+4. Open a PR with the Figma link to the source.
+
+
+## Example: a primary CTA card
+
+```tsx
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+
+export function PremiumCard() {
+  return (
+    <Card
+      className="border-primary/40"
+      style={{ boxShadow: "var(--lad-shadow-accent)" }}
+    >
+      <CardHeader>
+        <CardTitle>Activa tu cuenta premium</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">
+          Acceso a métricas avanzadas y reportes programados.
+        </p>
+      </CardContent>
+      <CardFooter>
+        <Button>Activar ahora</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+```
+
+This component renders correctly in both Platform (dark) and Reports (light)
+modes because every value resolves through a semantic CSS variable.

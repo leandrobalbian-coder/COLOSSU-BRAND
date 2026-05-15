@@ -17,6 +17,7 @@ export default function RadiusPage() {
         eyebrow="Foundations"
         title="Radius"
         description="El brand book de Colossu redondea todo con 10px de default. Eso vive en --radius, y las clases rounded-sm / rounded-md / rounded-lg de Tailwind se derivan automáticamente."
+        download={{ file: "spacing-tokens.md", label: "spacing-tokens.md" }}
       />
 
       <section>

@@ -79,6 +79,7 @@ export default function SemanticTokensPage() {
         eyebrow="Tokens · Layer 2"
         title="Semantic"
         description="Lo que cada color significa. Cambia con el tema activo (Platform / Reports). shadcn consume estos nombres directamente — por eso los componentes heredan el branding sin tocar el JSX."
+        download={{ file: "color-tokens.md", label: "color-tokens.md" }}
       />
 
       <section className="mb-12">

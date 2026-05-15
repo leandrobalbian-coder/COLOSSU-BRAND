@@ -24,6 +24,7 @@ export default function ComponentTokensPage() {
         eyebrow="Tokens · Layer 3"
         title="Component"
         description="Tokens por componente. Existen sólo cuando un componente necesita un contrato propio (ej. una sombra accent o una variante destructiva). Nunca referencian primitivos — siempre suben por la capa semántica."
+        download={{ file: "component-usage.md", label: "component-usage.md" }}
       />
 
       <section className="mb-12">

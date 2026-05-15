@@ -12,6 +12,7 @@ export default function PrimitivesPage() {
         eyebrow="Tokens · Layer 1"
         title="Primitives"
         description="La paleta cruda. Los primitivos viven en :root y no cambian con el tema. Nunca consumas un primitivo desde un componente — pasa siempre por un semántico."
+        download={{ file: "color-tokens.md", label: "color-tokens.md" }}
       />
 
       <section className="mb-12">
