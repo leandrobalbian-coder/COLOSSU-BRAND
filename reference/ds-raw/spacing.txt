@@ -1,0 +1,11 @@
+{base:`2px`,tokens:[{token:`spacing-0.5`,px:`2px`,rem:`0.125rem`},{token:`spacing-1`,px:`4px`,rem:`0.25rem`},{token:`spacing-1.5`,px:`5px`,rem:`0.3125rem`},{token:`spacing-2`,px:`8px`,rem:`0.5rem`},{token:`spacing-3`,px:`12px`,rem:`0.75rem`},{token:`spacing-4`,px:`16px`,rem:`1rem`},{token:`spacing-5`,px:`20px`,rem:`1.25rem`},{token:`spacing-6`,px:`24px`,rem:`1.5rem`},{token:`spacing-8`,px:`30px`,rem:`1.875rem`},{token:`spacing-9`,px:`36px`,rem:`2.25rem`},{token:`spacing-10`,px:`40px`,rem:`2.5rem`},{token:`spacing-12`,px:`48px`,rem:`3rem`},{token:`spacing-15`,px:`60px`,rem:`3.75rem`},{token:`spacing-16`,px:`64px`,rem:`4rem`},{token:`spacing-20`,px:`80px`,rem:`5rem`}],containers:[{name:`Small`,width:`450px`,usage:`Narrow content, modals`},{name:`Medium`,width:`720px`,usage:`Content columns, forms`},{name:`Default`,width:`900px`,usage:`Standard content`},{name:`Wide`,width:`1200px`,usage:`Browse grids, cards`},{name:`Max`,width:`1350px`,usage:`Landing page sections`},{name:`Full`,width:`1500px`,usage:`Widest content area`}],gaps:[{value:`4px`,usage:`Tight — icon + text`},{value:`8px`,usage:`Compact — inline elements`},{value:`12px`,usage:`Default — form fields`},{value:`16px`,usage:`Standard — card content`},{value:`20px`,usage:`Comfortable — grid gaps`},{value:`24px`,usage:`Sections — card grids`},{value:`48px`,usage:`Large — section spacing`},{value:`60px`,usage:`XL — page sections`}],cssReference:`/* Base unit */
+--spacing-base: 2px;
+
+/* Tailwind spacing override */
+--spacing: 0.25rem; /* 4px base for Tailwind */
+
+/* Common gaps */
+gap: 24px; /* Card grids */
+gap: 20px; /* Content grids */
+gap: 16px; /* Form elements */
+gap: 8px;  /* Inline groups */`}

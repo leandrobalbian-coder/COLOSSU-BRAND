@@ -1,0 +1,14 @@
+{typeScale:[{size:`36px`,rem:`2.25rem`,weight:`300`,lh:`36px`,ls:`1.5px`,usage:`h1 — Hero headlines`},{size:`32px`,rem:`2rem`,weight:`400`,lh:`48px`,ls:`normal`,usage:`Display — Large section titles`},{size:`26px`,rem:`1.625rem`,weight:`600`,lh:`33.8px`,ls:`normal`,usage:`h2 — Section headings`},{size:`24px`,rem:`1.5rem`,weight:`600`,lh:`32.16px`,ls:`normal`,usage:`h3 — Sub-section headings`},{size:`22px`,rem:`1.375rem`,weight:`500`,lh:`33px`,ls:`normal`,usage:`h2 alt — Card titles, feature titles`},{size:`20px`,rem:`1.25rem`,weight:`600`,lh:`30px`,ls:`normal`,usage:`Large body — Emphasized paragraphs`},{size:`18px`,rem:`1.125rem`,weight:`400`,lh:`28px`,ls:`normal`,usage:`Body large — Descriptions, nav items`},{size:`16px`,rem:`1rem`,weight:`400`,lh:`24px`,ls:`normal`,usage:`Body — Default text size`},{size:`15px`,rem:`0.9375rem`,weight:`500`,lh:`26px`,ls:`normal`,usage:`Body compact — Links, buttons`},{size:`14px`,rem:`0.875rem`,weight:`700`,lh:`20px`,ls:`normal`,usage:`Small bold — Button labels, tags`},{size:`13px`,rem:`0.8125rem`,weight:`400`,lh:`17.33px`,ls:`normal`,usage:`Small — Secondary links, metadata`},{size:`12px`,rem:`0.75rem`,weight:`600`,lh:`16px`,ls:`normal`,usage:`Caption — Labels, badges`},{size:`10px`,rem:`0.625rem`,weight:`600`,lh:`15px`,ls:`normal`,usage:`Micro — Tags, status indicators`}],weights:[{weight:`300`,name:`Light`,count:`130x`,usage:`Hero headlines`},{weight:`400`,name:`Regular`,count:`7,418x`,usage:`Body text, descriptions`},{weight:`500`,name:`Medium`,count:`2,466x`,usage:`Links, nav items, buttons`},{weight:`600`,name:`Semibold`,count:`927x`,usage:`Headings, labels, badges`},{weight:`700`,name:`Bold`,count:`93x`,usage:`Small bold text, emphasis`}],sampleText:`Encuentra el espacio ideal`,cssReference:`/* Font family */
+font-family: 'Montserrat', sans-serif;
+
+/* Heading scale */
+h1 { font-size: 36px; font-weight: 300; line-height: 36px; letter-spacing: 1.5px; }
+h2 { font-size: 26px; font-weight: 600; line-height: 33.8px; }
+h3 { font-size: 24px; font-weight: 600; line-height: 32.16px; }
+
+/* Body */
+body { font-size: 16px; font-weight: 400; line-height: 24px; }
+
+/* Small */
+.small { font-size: 14px; font-weight: 700; line-height: 20px; }
+.caption { font-size: 12px; font-weight: 600; line-height: 16px; }`}

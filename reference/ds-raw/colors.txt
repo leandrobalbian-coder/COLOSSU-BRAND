@@ -1,0 +1,15 @@
+{brand:[{name:`Primary`,hex:`#424552`,description:`Main text & dark UI`,textColor:`white`},{name:`Primary Light`,hex:`#535464`,description:`Secondary dark`,textColor:`white`},{name:`Primary Dark`,hex:`#1c1f2a`,description:`Darkest backgrounds`,textColor:`white`},{name:`Accent`,hex:`#ffaa00`,description:`CTAs & highlights`,textColor:`white`},{name:`Accent Light`,hex:`#ffc857`,description:`Gradient end`,textColor:`#424552`},{name:`Green (WhatsApp)`,hex:`#25d366`,description:`WhatsApp CTA`,textColor:`white`}],neutrals:[{name:`White`,hex:`#ffffff`,textColor:`#424552`},{name:`Gray 50`,hex:`#f6f8fb`,textColor:`#424552`},{name:`Gray 100`,hex:`#f5f5f5`,textColor:`#424552`},{name:`Gray 200`,hex:`#e5e5e5`,textColor:`#424552`},{name:`Gray 300`,hex:`#cccdd1`,textColor:`#424552`},{name:`Gray 400`,hex:`#9898a2`,textColor:`white`},{name:`Gray 500`,hex:`#737373`,textColor:`white`},{name:`Gray 600`,hex:`#666666`,textColor:`white`},{name:`Gray 700`,hex:`#535464`,textColor:`white`},{name:`Gray 800`,hex:`#424552`,textColor:`white`},{name:`Gray 900`,hex:`#1c1f2a`,textColor:`white`},{name:`Black`,hex:`#000000`,textColor:`white`}],semantic:[{name:`Error`,hex:`#dc2626`,textColor:`white`},{name:`Warning`,hex:`#f97316`,textColor:`white`},{name:`Info`,hex:`#0ea5e9`,textColor:`white`},{name:`Success`,hex:`#25d366`,textColor:`white`}],gradients:[{name:`Accent CTA Gradient`,css:`linear-gradient(to right, #ffaa00, #ffc857)`},{name:`Image Overlay`,css:`linear-gradient(rgba(0,0,0,0.5) 36%, rgba(0,0,0,0) 89%)`},{name:`Fade Right`,css:`linear-gradient(to right, #ffffff, transparent)`},{name:`Fade Left`,css:`linear-gradient(to left, #ffffff, transparent)`}],usageGuidelines:[{context:`Body Text`,hex:`#424552`,notes:`Primary color on white backgrounds`},{context:`Headings`,hex:`#424552`,notes:`Same as body, differentiated by weight`},{context:`Muted Text`,hex:`#737373`,notes:`Secondary info, labels, metadata`},{context:`CTA Buttons`,hex:`#ffaa00`,notes:`Primary actions (white text)`},{context:`WhatsApp CTA`,hex:`#25d366`,notes:`Contact via WhatsApp buttons`},{context:`Borders`,hex:`#e5e5e5`,notes:`Most frequent border color (10,819 uses)`},{context:`Page Background`,hex:`#ffffff`,notes:`Main content areas`},{context:`Alt Background`,hex:`#f6f8fb`,notes:`Subtle section distinction`}],cssVariables:`/* Brand */
+--color-spot-primary: #424552;
+--color-spot-accent: #ffaa00;
+--color-spot-green: #25d366;
+
+/* Neutrals */
+--color-spot-gray-50: #f6f8fb;
+--color-spot-gray-200: #e5e5e5;
+--color-spot-gray-500: #737373;
+
+/* Semantic */
+--color-spot-error: #dc2626;
+--color-spot-warning: #f97316;
+--color-spot-info: #0ea5e9;
+--color-spot-success: #25d366;`}
